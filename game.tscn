@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b6r1fy0smnbue"]
+
+[ext_resource type="Script" uid="uid://v5tm5tu31wqe" path="res://game.gd" id="1_80nbo"]
+[ext_resource type="AudioStream" uid="uid://bwr7p8jbwn1nv" path="res://Audio/xtremefreddy-game-music-loop-7-145285.mp3" id="2_ryrav"]
+[ext_resource type="AudioStream" uid="uid://bn5ey5qvogg" path="res://Audio/dragon-studio-cartoon-jump-463196.mp3" id="3_eow3j"]
+[ext_resource type="AudioStream" uid="uid://dm1p6jmqky6qj" path="res://Audio/freesound_community-boing-spring-mouth-harp-04-20-13-4-103346.mp3" id="4_j5wjh"]
+[ext_resource type="AudioStream" uid="uid://chnvfvwwivmg1" path="res://Audio/dragon-studio-game-over-retro-8bit-sfx-499656.mp3" id="5_vef74"]
+[ext_resource type="AudioStream" uid="uid://c2kfbggfoc5m5" path="res://Audio/emand_edroff-victory-bell-success-fanfare-576275.mp3" id="6_hve3p"]
+
+[node name="Game" type="Node2D" unique_id=1499615889]
+script = ExtResource("1_80nbo")
+
+[node name="LevelRoot" type="Node2D" parent="." unique_id=417270216]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1193003763]
+
+[node name="InfoLabel" type="Label" parent="UI" unique_id=465480701]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+
+[node name="MessageLabel" type="Label" parent="UI" unique_id=2016175209]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=41191350]
+stream = ExtResource("2_ryrav")
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=1718301937]
+stream = ExtResource("3_eow3j")
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="." unique_id=165681652]
+stream = ExtResource("4_j5wjh")
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="." unique_id=1000105559]
+stream = ExtResource("5_vef74")
+
+[node name="VictorySound" type="AudioStreamPlayer" parent="." unique_id=1300425731]
+stream = ExtResource("6_hve3p")
